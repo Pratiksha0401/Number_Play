@@ -16,7 +16,7 @@ public class NumberPlay {
 			numbers.add(in.nextInt());
 		}
 		
-		List<Double> doubleValues=numbers.stream().filter(e -> e%2==0).map(Integer::doubleValue).collect(Collectors.toList());
-		System.out.println(doubleValues);
+		Double even=numbers.stream().map(Integer::doubleValue).filter(e -> e%2==0).peek(p-> System.out.println("Peek"+p)).findFirst().orElse(null);
+		System.out.println(even);
 	}
 }
