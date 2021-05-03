@@ -1,6 +1,7 @@
 package numberPlay;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class NumberPlay {
 	
@@ -15,6 +16,7 @@ public class NumberPlay {
 			numbers.add(in.nextInt());
 		}
 		
-		numbers.stream().forEach(System.out::print);
+		List<Double> doubleValues=numbers.stream().map(Integer::doubleValue).collect(Collectors.toList());
+		System.out.println(doubleValues);
 	}
 }
