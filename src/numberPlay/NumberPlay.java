@@ -16,7 +16,7 @@ public class NumberPlay {
 			numbers.add(in.nextInt());
 		}
 		
-		numbers.stream().map(Integer::doubleValue).forEach(System.out::println);
-		//System.out.println(doubleValues);
+		List<Double> doubleValues=numbers.stream().map(Integer::doubleValue).collect(Collectors.toList());
+		System.out.println(doubleValues);
 	}
 }
