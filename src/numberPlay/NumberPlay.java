@@ -16,9 +16,9 @@ public class NumberPlay {
 			numbers.add(in.nextInt());
 		}
 		
-		Double evenMin=numbers.stream().map(Integer::doubleValue).filter(e -> e%2==0).min(Comparator.comparingDouble(Double::doubleValue)).orElse(null);
-		System.out.println(evenMin);
-		Double evenMax=numbers.stream().map(Integer::doubleValue).filter(e -> e%2==0).max(Comparator.comparingDouble(Double::doubleValue)).orElse(null);
-		System.out.println(evenMax);
+		Double minEven=numbers.stream().map(Integer::doubleValue).filter(e -> e%2==0).min(Comparator.comparingDouble(Double::doubleValue)).orElse(null);
+		System.out.println(minEven);
+		Double maxEven=numbers.stream().map(Integer::doubleValue).filter(e -> e%2==0).max(Comparator.comparingDouble(Double::doubleValue)).orElse(null);
+		System.out.println(maxEven);
 	}
 }
