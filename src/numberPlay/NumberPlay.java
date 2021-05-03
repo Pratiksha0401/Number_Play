@@ -16,9 +16,9 @@ public class NumberPlay {
 			numbers.add(in.nextInt());
 		}
 		
-		Double minEven=numbers.stream().map(Integer::doubleValue).filter(e -> e%2==0).min(Comparator.comparingDouble(Double::doubleValue)).orElse(null);
-		System.out.println(minEven);
-		Double maxEven=numbers.stream().map(Integer::doubleValue).filter(e -> e%2==0).max(Comparator.comparingDouble(Double::doubleValue)).orElse(null);
-		System.out.println(maxEven);
+		Double sumOfNumbers=numbers.stream().map(Integer::doubleValue).reduce((double) 0, Double::sum);
+		System.out.println("Sum of numbers : " +sumOfNumbers);
+		long count=numbers.stream().count();
+		System.out.println("Average of Numbers : " +sumOfNumbers/count);
 	}
 }
